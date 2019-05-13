@@ -58,3 +58,6 @@ banner.setAttribute("src", siteContent["cta"]["img-src"]);
 // Remember, NO direct updating of the HTML source is allowed.
 // Using your selectors, update the content to match the example file.
 // Remember to update the src attributes on images
+
+let navItem = document.querySelectorAll("nav a");
+console.log(navItem);

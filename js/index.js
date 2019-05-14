@@ -59,13 +59,21 @@ banner.setAttribute("src", siteContent["cta"]["img-src"]);
 // Using your selectors, update the content to match the example file.
 // Remember to update the src attributes on images
 
-let navItem = document.querySelectorAll("a");
-navItem[0].textContent = siteContent["nav"]["nav-item-1"];
-navItem[1].textContent = siteContent["nav"]["nav-item-2"];
-navItem[2].textContent = siteContent["nav"]["nav-item-3"];
-navItem[3].textContent = siteContent["nav"]["nav-item-4"];
-navItem[4].textContent = siteContent["nav"]["nav-item-5"];
-navItem[5].textContent = siteContent["nav"]["nav-item-6"];
+// let green = document.querySelectorAll("header nav a");
+// green.forEach(aGreen => {
+//   aGreen.style.color = "green";
+// });
+
+let navItem = document.querySelectorAll("nav a");
+navItem.forEach((navEach, i) => {
+  navEach.textContent = siteContent.nav[`nav-item-${i + 1}`];
+});
+// navItem[0].textContent = siteContent["nav"]["nav-item-1"];
+// navItem[1].textContent = siteContent["nav"]["nav-item-2"];
+// navItem[2].textContent = siteContent["nav"]["nav-item-3"];
+// navItem[3].textContent = siteContent["nav"]["nav-item-4"];
+// navItem[4].textContent = siteContent["nav"]["nav-item-5"];
+// navItem[5].textContent = siteContent["nav"]["nav-item-6"];
 
 let headerOne = (document.querySelector(".cta .cta-text h1").textContent =
   "Dom is Awesome");
@@ -106,3 +114,7 @@ let green = document.querySelectorAll("header nav a");
 green.forEach(aGreen => {
   aGreen.style.color = "green";
 });
+
+let newNav = document.createElement("news");
+newNav.textContent = " news";
+document.querySelector("header nav a").appendChild(newNav);
